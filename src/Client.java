@@ -1,9 +1,11 @@
 import java.net.*;
+import java.util.Scanner;
 import java.io.*;
 public class Client {
 	public static void main(String[] args) {
 		int serverPort = 6666;
-		String address = "127.0.0.1";
+		Scanner cmd = new Scanner(System.in);
+		String address = cmd.nextLine();
 		try {
 			InetAddress ipAddress = InetAddress.getByName(address);
 			System.out.println("Any of you heard of a socket with IP address "+address+" and port "+serverPort+"?");
